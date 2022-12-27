@@ -1,0 +1,5 @@
+The initial errors that were thrown when starting the application were fixed, the date for one movie was wrong so I fixed that, I added the dependency for the H2 database. 
+For the change of code part I didn't do much as I was low on time but I replaced all the getters and setters in classes with the Lombok @Data annotation which creates all that + toString, equals and hashCode methods. Also I separated the schema.sql and data.sql for the creation of tables in the database and poplating data for them. 
+
+As for the changes that I would maybe do -> I would separate the *DTOMapper classes into a separate "converters" package and make them implement the Converter interface because I am used to doing that like that from previous projects.
+For the movie validator I would remove it alltogether and just use Springs validation annotations which enable us the same features without the need of redundant code.

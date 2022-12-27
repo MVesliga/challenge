@@ -1,0 +1,18 @@
+CREATE TABLE MOVIE
+(
+  id IDENTITY NOT NULL,
+  title VARCHAR2(100) NOT NULL,
+  date DATE NOT NULL,
+  rank REAL NOT NULL,
+  revenue NUMERIC
+);
+
+CREATE TABLE ACTOR
+(
+    id IDENTITY NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    birth_date DATE NOT NULL,
+    gender CHAR(1) NOT NULL,
+    movie_id INT NOT NULL,
+    FOREIGN KEY(movie_id) REFERENCES MOVIE(id)
+);
